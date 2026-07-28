@@ -1,0 +1,9 @@
+{
+  "icon": "ph:plant-duotone",
+  "primaryColor": "#B45309",
+  "backgroundColor": "#F3F4F6",
+  "accentColor": "#047857",
+  "heroTitle": "Знахарь",
+  "layoutStyle": "hero",
+  "previewSvg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 240'><rect width='400' height='240' rx='12' fill='#0A0A0A'/><text x='200' y='100' text-anchor='middle' font-family='Georgia,serif' font-size='32' font-weight='700' fill='#B45309'>Знахарь</text><rect x='60' y='130' width='80' height='60' rx='8' fill='#1C1C1C' stroke='#047857' stroke-width='1'/><rect x='160' y='130' width='80' height='60' rx='8' fill='#1C1C1C' stroke='#047857' stroke-width='1'/><rect x='260' y='130' width='80' height='60' rx='8' fill='#1C1C1C' stroke='#047857' stroke-width='1'/><text x='200' y='215' text-anchor='middle' font-family='Inter,sans-serif' font-size='10' fill='#78716C'>ИИ + древние знания трав</text></svg>"
+}

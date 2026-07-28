@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * Design system tokens — Znakhar: dark urban apothecary
+ * Amber (янтарь) primary, Emerald (изумруд) accent
+ */
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 30 10% 5%;
+    --card: 30 20% 98%;
+    --card-foreground: 30 10% 5%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 30 10% 5%;
+    --primary: 29 95% 32%;
+    --primary-foreground: 40 80% 96%;
+    --secondary: 30 20% 94%;
+    --secondary-foreground: 29 95% 20%;
+    --muted: 30 15% 92%;
+    --muted-foreground: 30 8% 42%;
+    --accent: 160 85% 24%;
+    --accent-foreground: 150 60% 95%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 30 15% 85%;
+    --input: 30 15% 85%;
+    --ring: 29 95% 32%;
+    --radius: 0.5rem;
+    --font-sans: 'Inter';
+    --font-display: 'Playfair Display';
+  }
+
+  .dark {
+    --background: 20 12% 4%;
+    --foreground: 40 30% 92%;
+    --card: 20 10% 7%;
+    --card-foreground: 40 30% 92%;
+    --popover: 20 10% 7%;
+    --popover-foreground: 40 30% 92%;
+    --primary: 32 95% 50%;
+    --primary-foreground: 20 15% 4%;
+    --secondary: 20 10% 12%;
+    --secondary-foreground: 40 30% 92%;
+    --muted: 20 8% 14%;
+    --muted-foreground: 30 12% 55%;
+    --accent: 158 70% 35%;
+    --accent-foreground: 150 50% 94%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 20 8% 18%;
+    --input: 20 8% 18%;
+    --ring: 32 95% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
