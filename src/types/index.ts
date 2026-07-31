@@ -18,6 +18,34 @@ export interface CartItem {
   quantity: number
 }
 
+export interface User {
+  id: string
+  name: string
+  email: string
+  phone: string
+  password: string
+  address: string
+}
+
+export interface OrderItem {
+  productId: string
+  name: string
+  price: number
+  quantity: number
+}
+
+export interface Order {
+  id: string
+  email: string
+  items: OrderItem[]
+  total: number
+  address: string
+  payment: string
+  comment?: string
+  status: 'new' | 'paid' | 'shipped' | 'done'
+  date: string
+}
+
 export type ProductCategory = Product['category']
 
 export const CATEGORY_LABELS: Record<ProductCategory, string> = {

@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react'
 import { Link, NavLink } from 'react-router-dom'
-import { ShoppingCart, Menu, X } from 'lucide-react'
+import { ShoppingCart, Menu, X, User } from 'lucide-react'
 import { useCart } from '@/hooks/useCart'
+import { useAuth } from '@/hooks/useAuth'
 
 const navLinks = [
   { to: '/', label: 'Главная' },
@@ -15,6 +16,7 @@ export function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
   const { itemCount } = useCart()
+  const { user } = useAuth()
 
   useEffect(() => {
     const handler = () => setScrolled(window.scrollY > 40)
@@ -45,9 +47,10 @@ export function Navbar() {
               {link.label}
             </NavLink>
           ))}
-          <button
+          <Link
+            to="/cart"
             className="relative inline-flex items-center gap-1.5 rounded-lg bg-accent px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-accent/90"
-            title="Корзина (скоро)"
+            title="Корзина"
           >
             <ShoppingCart className="h-4 w-4" />
             {itemCount > 0 && (
@@ -55,7 +58,15 @@ export function Navbar() {
                 {itemCount}
               </span>
             )}
-          </button>
+          </Link>
+          <Link
+            to="/account"
+            className="inline-flex items-center gap-1.5 rounded-lg border border-white/15 px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:border-primary hover:text-primary"
+            title="Личный кабинет"
+          >
+            <User className="h-4 w-4" />
+            {user ? user.name.split(' ')[0] : 'Войти'}
+          </Link>
         </div>
 
         <button className="md:hidden" onClick={() => setOpen(!open)}>
@@ -77,10 +88,22 @@ export function Navbar() {
                 {link.label}
               </NavLink>
             ))}
-            <button className="inline-flex items-center gap-1.5 rounded-lg bg-accent px-4 py-2 text-sm font-medium text-white">
+            <Link
+              to="/cart"
+              className="inline-flex items-center gap-1.5 rounded-lg bg-accent px-4 py-2 text-sm font-medium text-white"
+              onClick={() => setOpen(false)}
+            >
               <ShoppingCart className="h-4 w-4" />
               Корзина {itemCount > 0 && `(${itemCount})`}
-            </button>
+            </Link>
+            <Link
+              to="/account"
+              className="inline-flex items-center gap-1.5 rounded-lg border border-white/15 px-4 py-2 text-sm font-medium text-white/80"
+              onClick={() => setOpen(false)}
+            >
+              <User className="h-4 w-4" />
+              {user ? user.name.split(' ')[0] : 'Войти'}
+            </Link>
           </div>
         </div>
       )}
