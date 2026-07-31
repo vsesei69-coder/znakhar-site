@@ -1,7 +1,7 @@
 export interface Product {
   id: string
   name: string
-  category: 'ointment' | 'cream' | 'oil' | 'cosmetics' | 'aphrodisiac'
+  category: 'ointment' | 'cream' | 'cosmetics' | 'aphrodisiac'
   description: string
   price: number
   plantName: string
@@ -23,7 +23,6 @@ export type ProductCategory = Product['category']
 export const CATEGORY_LABELS: Record<ProductCategory, string> = {
   ointment: 'Мази',
   cream: 'Кремы',
-  oil: 'Эфирные масла',
   cosmetics: 'Косметика ручной работы',
   aphrodisiac: 'Афродизиаки',
 }

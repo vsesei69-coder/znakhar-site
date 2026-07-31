@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Heart, Stethoscope, Timer, Wind, Sparkles } from 'lucide-react'
+import { Heart, Stethoscope, Timer, Sparkles } from 'lucide-react'
 import { Img } from '@/components/ui/Img'
 
 const directions = [
@@ -23,13 +23,6 @@ const directions = [
     desc: 'Кремы и мази для продления сексуального контакта на основе натуральных эфирных масел.',
     image: 'https://storage.googleapis.com/figapp-44eac.appspot.com/chat-attachments/3FoHBJJkD7Mo1V4iHB3ZMPbBsUh2/49b70fe8-5f5a-4a8e-9154-776a97acce4f/images/1785221483671-vaw214fuhmh.png',
     seed: 'prolongator',
-  },
-  {
-    icon: Wind,
-    title: 'Аромотерапия',
-    desc: 'Чистые эфирные масла первого отжима для дома, массажа и медитации.',
-    image: 'https://storage.googleapis.com/figapp-44eac.appspot.com/chat-attachments/3FoHBJJkD7Mo1V4iHB3ZMPbBsUh2/49b70fe8-5f5a-4a8e-9154-776a97acce4f/images/1785221723957-03uqc0p78a1h.png',
-    seed: 'aroma',
   },
   {
     icon: Sparkles,

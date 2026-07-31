@@ -5,7 +5,7 @@ import { ProductCard } from '@/components/ProductCard'
 import { products } from '@/data/products'
 import { CATEGORY_LABELS, type ProductCategory } from '@/types'
 
-const categories: (ProductCategory | 'all')[] = ['all', 'ointment', 'cream', 'oil', 'cosmetics', 'aphrodisiac']
+const categories: (ProductCategory | 'all')[] = ['all', 'ointment', 'cream', 'cosmetics', 'aphrodisiac']
 
 export function CatalogPage() {
   const [active, setActive] = useState<ProductCategory | 'all'>('all')

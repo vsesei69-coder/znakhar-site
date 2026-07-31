@@ -4,7 +4,6 @@ import { Heart } from 'lucide-react'
 const categories = [
   { to: '/category/ointment', label: 'Мази' },
   { to: '/category/cream', label: 'Кремы' },
-  { to: '/category/oil', label: 'Эфирные масла' },
   { to: '/category/cosmetics', label: 'Косметика ручной работы' },
   { to: '/category/aphrodisiac', label: 'Афродизиаки' },
 ]
