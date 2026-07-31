@@ -93,12 +93,12 @@ export function PhilosophyPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 0.6 }}
-            className="mt-16 rounded-2xl bg-primary p-8 text-center sm:p-12"
+            className="mt-16 rounded-2xl border border-border bg-card p-8 text-center sm:p-12"
           >
-            <h2 className="font-display text-2xl font-bold text-white sm:text-3xl">
+            <h2 className="font-display text-2xl font-bold text-foreground sm:text-3xl">
               Меньше — значит больше
             </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-white/85">
+            <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground">
               Мы сознательно не расширяем линейку в погоне за ассортиментом. Каждое средство проходит
               путь от рук знахаря до рук покупателя, и на каждом этапе есть место заботе.
               Это и есть наша философия производства.

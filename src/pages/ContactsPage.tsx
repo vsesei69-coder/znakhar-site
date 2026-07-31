@@ -91,15 +91,15 @@ export function ContactsPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 0.6 }}
-            className="mt-12 flex flex-col items-center gap-3 rounded-2xl bg-primary p-8 text-center sm:flex-row sm:justify-between sm:text-left"
+            className="mt-12 flex flex-col items-center gap-3 rounded-2xl border border-border bg-card p-8 text-center sm:flex-row sm:justify-between sm:text-left"
           >
             <div className="flex items-center gap-3">
-              <Clock className="h-6 w-6 text-white/80" />
-              <p className="text-base text-white">
+              <Clock className="h-6 w-6 text-primary/80" />
+              <p className="text-base text-foreground">
                 Работаем ежедневно с 10:00 до 20:00 (МСК)
               </p>
             </div>
-            <p className="text-sm text-white/70">
+            <p className="text-sm text-muted-foreground">
               Доставка по всей России
             </p>
           </motion.div>
