@@ -15,6 +15,16 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Знахарь — косметика из эфирных масел" />
     <meta name="twitter:description" content="Синтез ИИ-расчётов и древних знаний трав." />
+    <script>
+      // Восстановление URL после 404-редиректа GitHub Pages (SPA fallback)
+      (function () {
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect !== location.href) {
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet" />

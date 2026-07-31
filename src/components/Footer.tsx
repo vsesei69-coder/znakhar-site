@@ -1,4 +1,20 @@
+import { Link } from 'react-router-dom'
 import { Heart } from 'lucide-react'
+
+const categories = [
+  { to: '/category/ointment', label: 'Мази' },
+  { to: '/category/cream', label: 'Кремы' },
+  { to: '/category/oil', label: 'Эфирные масла' },
+  { to: '/category/cosmetics', label: 'Косметика ручной работы' },
+  { to: '/category/aphrodisiac', label: 'Афродизиаки' },
+]
+
+const pages = [
+  { to: '/about', label: 'О фирме' },
+  { to: '/philosophy', label: 'Философия' },
+  { to: '/catalog', label: 'Каталог' },
+  { to: '/contacts', label: 'Контакты' },
+]
 
 export function Footer() {
   return (
@@ -6,19 +22,34 @@ export function Footer() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="flex flex-col items-center gap-8 sm:flex-row sm:justify-between">
           <div>
-            <p className="font-display text-2xl font-bold text-primary">Знахарь</p>
+            <Link to="/" className="font-display text-2xl font-bold text-primary">
+              Знахарь
+            </Link>
             <p className="mt-1 text-sm text-muted-foreground">
               Синтез ИИ и древних знаний трав
             </p>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-6 text-sm">
+          <div className="grid grid-cols-2 gap-x-12 gap-y-6 sm:flex sm:flex-wrap sm:gap-10">
             <ul className="space-y-1.5">
-              <li><a href="#" className="text-sm text-muted-foreground transition-colors hover:text-primary">Афродизиаки</a></li>
-              <li><a href="#" className="text-sm text-muted-foreground transition-colors hover:text-primary">Лечение простаты</a></li>
-              <li><a href="#" className="text-sm text-muted-foreground transition-colors hover:text-primary">Пролонгаторы</a></li>
-              <li><a href="#" className="text-sm text-muted-foreground transition-colors hover:text-primary">Аромотерапия</a></li>
-              <li><a href="#" className="text-sm text-muted-foreground transition-colors hover:text-primary">Косметика ручной работы</a></li>
+              <li className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">Каталог</li>
+              {categories.map((c) => (
+                <li key={c.to}>
+                  <Link to={c.to} className="text-sm text-muted-foreground transition-colors hover:text-primary">
+                    {c.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <ul className="space-y-1.5">
+              <li className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">Компания</li>
+              {pages.map((p) => (
+                <li key={p.to}>
+                  <Link to={p.to} className="text-sm text-muted-foreground transition-colors hover:text-primary">
+                    {p.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
         </div>

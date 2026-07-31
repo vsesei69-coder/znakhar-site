@@ -1,27 +1,41 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Toaster } from '@/components/ui/sonner'
 import { CartProvider } from '@/hooks/useCart'
-// fig-compose: manual — single-page site with hand-composed sections
+import { ScrollToTop } from '@/components/ScrollToTop'
 import { Navbar } from '@/components/Navbar'
-import { Hero } from '@/components/Hero'
-import { Philosophy } from '@/components/Philosophy'
-import { Directions } from '@/components/Directions'
-import { Catalog } from '@/components/Catalog'
 import { Footer } from '@/components/Footer'
+import { HomePage } from '@/pages/HomePage'
+import { AboutPage } from '@/pages/AboutPage'
+import { PhilosophyPage } from '@/pages/PhilosophyPage'
+import { CatalogPage } from '@/pages/CatalogPage'
+import { CategoryPage } from '@/pages/CategoryPage'
+import { ProductPage } from '@/pages/ProductPage'
+import { ContactsPage } from '@/pages/ContactsPage'
+import { NotFoundPage } from '@/pages/NotFoundPage'
 
 export default function App() {
   return (
-    <CartProvider>
-      <div className="min-h-screen bg-background text-foreground antialiased">
-        <Toaster />
-        <Navbar />
-        <main>
-          <Hero />
-          <Philosophy />
-          <Directions />
-          <Catalog />
-        </main>
-        <Footer />
-      </div>
-    </CartProvider>
+    <BrowserRouter>
+      <CartProvider>
+        <div className="min-h-screen bg-background text-foreground antialiased">
+          <Toaster />
+          <ScrollToTop />
+          <Navbar />
+          <main>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/philosophy" element={<PhilosophyPage />} />
+              <Route path="/catalog" element={<CatalogPage />} />
+              <Route path="/category/:slug" element={<CategoryPage />} />
+              <Route path="/product/:id" element={<ProductPage />} />
+              <Route path="/contacts" element={<ContactsPage />} />
+              <Route path="*" element={<NotFoundPage />} />
+            </Routes>
+          </main>
+          <Footer />
+        </div>
+      </CartProvider>
+    </BrowserRouter>
   )
 }
